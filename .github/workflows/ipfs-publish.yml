@@ -1,0 +1,31 @@
+name: Publish to IPFS
+
+on:
+  push:
+    branches:
+      - main  # Replace with your GitHub Pages source branch if different
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install IPFS
+      run: sudo apt-get install ipfs
+
+    - name: Initialize IPFS
+      run: ipfs init
+
+    - name: Add site to IPFS
+      run: ipfs add -r ./  # Replace './' with the directory of your site if different
+      id: ipfs
+
+    - name: Publish to Pinata
+      uses: ibnesayeed/pinata-upload-action@v1
+      with:
+        pinata_api_key: ${{ secrets.PINATA_API_KEY }}
+        pinata_secret_api_key: ${{ secrets.PINATA_SECRET_API_KEY }}
+        path: ${{ steps.ipfs.outputs.hash }}
