@@ -18,6 +18,6 @@ jobs:
       with:
         path: ./  # The root directory of your repository
         service: pinata
-        pinataKey: ${{ secrets.PINATA_API_KEY }}
-        pinataSecret: ${{ secrets.PINATA_SECRET_API_KEY }}
+        pinataKey: ${{ secrets.PINATA_API }}
+        pinataSecret: ${{ secrets.PINATA_API_KEY }}
         pinataPinName: my_unique_pin_name  # Replace with a name you choose
