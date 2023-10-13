@@ -3,7 +3,7 @@ name: Publish to IPFS
 on:
   push:
     branches:
-      - main  # Replace with your GitHub Pages source branch if different
+      - main 
 
 jobs:
   deploy:
@@ -13,19 +13,10 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Install IPFS
-      run: sudo apt-get install ipfs
-
-    - name: Initialize IPFS
-      run: ipfs init
-
-    - name: Add site to IPFS
-      run: ipfs add -r ./  # Replace './' with the directory of your site if different
-      id: ipfs
-
-    - name: Publish to Pinata
-      uses: ibnesayeed/pinata-upload-action@v1
+    - name: Upload to IPFS via Pinata
+      uses: aquiladev/ipfs-action@master
       with:
-        pinata_api_key: ${{ secrets.PINATA_API }}
-        pinata_secret_api_key: ${{ secrets.PINATA_API_KEY }}
-        path: ${{ steps.ipfs.outputs.hash }}
+        path: ./  
+        service: pinata
+        pinataKey: ${{ secrets.PINATA_API }}
+        pinataSecret: ${{ secrets.PINATA_API_KEY }}
