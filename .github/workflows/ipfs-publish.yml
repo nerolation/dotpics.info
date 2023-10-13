@@ -26,6 +26,6 @@ jobs:
     - name: Publish to Pinata
       uses: ibnesayeed/pinata-upload-action@v1
       with:
-        pinata_api_key: ${{ secrets.PINATA_API_KEY }}
-        pinata_secret_api_key: ${{ secrets.PINATA_SECRET_API_KEY }}
+        pinata_api_key: ${{ secrets.PINATA_API }}
+        pinata_secret_api_key: ${{ secrets.PINATA_API_KEY }}
         path: ${{ steps.ipfs.outputs.hash }}
