@@ -24,8 +24,6 @@ header {
 }
 
 main {
-  display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   max-width: 90vw;
   margin: auto;
@@ -127,6 +125,17 @@ header h1 {
   padding: 20px;
   font-size: 2.5em;
   animation: slideInFromLeft 1s ease-in-out;
+}
+
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.horizontal-line {
+  width: 100%;
+  margin: 20px 0;
 }
 
 @keyframes slideInFromLeft {
