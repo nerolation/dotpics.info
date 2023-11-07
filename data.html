@@ -3,11 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <title>Data</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="static/styles.css">
+  <link rel="shortcut icon" href="https://mevboost.toniwahrstaetter.com/ethlogo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@nero_ETH">
+  <meta name="twitter:title" content="DotPics - Open Source Stuff Around Ethereum">
+  <meta name="twitter:description" content="Collection of Open-Source Dashboards and Data Sets for Ethereum.">
+  <meta name="twitter:image" content="./static/dotpics_preview.png">
+  <meta property="og:title" content="DotPics - Open Source Stuff Around Ethereum" relay="" api="" dashboard="">
+  <meta property="og:site_name" content="dotpics.info">
+  <meta property="og:url" content="dotpics.info">
+  <meta property="og:description" content="Collection of Open-Source Dashboards and Data Sets for Ethereum.">
+  <meta property="og:type" content="website">
+  <link rel="shortcut icon" href="https://mevboost.toniwahrstaetter.com/ethlogo.png">
+  <meta property="og:image" content="./static/dotpics_preview.png">
+  <meta name="description" content="Collection of Open-Source Dashboards and Data Sets for Ethereum.">
+  <meta name="keywords" content="Ethereum, MEV-Boost, PBS, Dashboard, Censorship, DotPics, Wahrstätter">
+  <meta name="author" content="Toni Wahrstätter">
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-5PEPZ18GVK');
+  </script>
 </head>
 <body>
   <header>
-    <h1>Data Sets</h1>
+    <h1>DotPics - Data Sets</h1>
   </header>
   <main>
     <table id="data-table">
@@ -23,7 +46,18 @@
       <tbody>
         <tr>
           <td>MEV-Boost Relays</td>
-          <td>All slots since the Merge with additional info on relays</td>
+          <td>
+              <div class="description">
+                  All slots since the Merge with additional info on relays
+                  <div class="table-schema">
+                      <!-- Schema info here -->
+                      <p>Slot: Number</p>
+                      <p>Relay: Text</p>
+                      <p>Info: Text</p>
+                      <!-- ... -->
+                  </div>
+              </div>
+          </td>
           <td>10MB</td>
           <td><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></td>
           <td><a href="#" class="download-link" data-filename="dataset1.zip">Download</a></td>
@@ -51,10 +85,53 @@
         </tr>
       </tbody>
     </table>
+    <br>
+    <h4>Problems loading the data?</h4>
+    <div class="code-sample">
+      <pre><code>// Sample Python code
+import pandas as pd
+
+FILENAME = ""
+
+df = pd.read_parquet(FILENAME)
+print(df.size)</code></pre>
+    </div>
   </main>
   <footer>
     <p>© 2023 Toni Wahrstätter</p>
   </footer>
-  <script src="script.js"></script>
+  <style>
+      .description {
+          position: relative;
+          cursor: pointer;
+        }
+
+        .table-schema {
+          display: none;
+          position: absolute;
+          bottom: 100%;
+          left: 0;
+          background-color: #fff;
+          border: 1px solid #ddd;
+          padding: 10px;
+          z-index: 10;
+          box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+          width: 200px;
+        }
+
+        .description:hover .table-schema {
+          display: block;
+        }
+
+        .table-schema::after {
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: 20px;
+          border-width: 5px;
+          border-style: solid;
+          border-color: #fff transparent transparent transparent;
+        }
+    </style>
 </body>
 </html>

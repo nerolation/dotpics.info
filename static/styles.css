@@ -149,6 +149,21 @@ header h1 {
   }
 }
 
+.code-sample {
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-left: 3px solid blue;
+  padding: 10px;
+  overflow: auto;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  margin-top: 20px;
+}
+
+code {
+  color: #333;
+  font-size: 0.95em;
+}
+
 
 /* Mobile Friendliness */
 @media (max-width: 768px) {
