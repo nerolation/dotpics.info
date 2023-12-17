@@ -9,24 +9,29 @@ Additionally, it provides access to open-source data and an API for programmatic
 
 ## MEV Landscape ([mevboost.pics](https://mevboost.pics))
 *Overview of the MEV-Boost landscape including relays, builders and validators, performance and timing analysis, and relay selection guide.*
+
 <img src="https://dotpics.info/static/mevboost_preview.png" width="500" alt="MEV Landscape Image">
 
 
 ## On-chain Censorship ([censorship.pics](https://censorship.pics))
 *Insights into censorship on Ethereum, identifying the entities involved, and implications for the Ethereum network.*
+
 <img src="https://dotpics.info/static/censorship_preview.png" width="500" alt="On-chain Censorship Image">
 
 
 ## Reorgs and Involved Parties ([reorg.pics](https://reorg.pics))
 *Detailed information on missed slots and past reorgs, involved parties, and impact assessment.*
+
 <img src="https://dotpics.info/static/reorg_preview.png" width="500" alt="Reorgs and Involved Parties Image">
 
 ## Tornado Cash Transaction Inclusion ([tornado.pics](https://tornado.pics))
 *Statistics and analytics Tornado Cash transaction inclusion, involved entities, and privacy implications.*
+
 <img src="https://dotpics.info/static/tornado-warning_preview.png" width="500" alt="Tornado.pics Image">
 
 ## Ethereum's Mempool Visualizations ([mempool.pics](https://mempool.pics))
 *Visual analysis of Ethereum's mempool involving users/searchers, builders and relays.*
+
 <img src="https://dotpics.info/static/mempoolpics_preview.png" width="500" alt="Ethereum's Mempool Image">
 
 ## Additional Resources
